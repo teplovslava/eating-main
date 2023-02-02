@@ -3,7 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     accordeonItems.forEach(item => {
         item.addEventListener('click', function () {
-            item.classList.toggle('opened__accorderon-item')
+            accordeonItems.forEach(obj => (
+                obj !== item && obj.classList.remove('opened__accorderon-item')
+
+            ))
+            if (item.classList.contains('opened__accorderon-item')) {
+                item.classList.remove('opened__accorderon-item')
+            }
+            else {
+                item.classList.add('opened__accorderon-item')
+            }
+
         })
     })
 })

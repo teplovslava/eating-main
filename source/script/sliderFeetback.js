@@ -3,5 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     direction: 'horizontal',
     slidesPerView: 'auto',
     spaceBetween: 70,
+
+    breakpoints: {
+      428: {
+        slidesPerView: 'auto',
+        spaceBetween: 20
+      }
+    }
   });
 })
